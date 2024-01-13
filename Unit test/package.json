@@ -1,0 +1,15 @@
+{
+  "name": "unit-test",
+  "version": "1.0.0",
+  "description": "Belajar Nodejs Unit test",
+  "main": "./src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Achmad Furqon Rachmadie",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
