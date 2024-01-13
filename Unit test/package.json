@@ -7,9 +7,17 @@
   "scripts": {
     "test": "jest"
   },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
   "author": "Achmad Furqon Rachmadie",
   "license": "ISC",
   "devDependencies": {
+    "@babel/preset-env": "^7.23.8",
+    "babel-jest": "^29.7.0",
     "jest": "^29.7.0"
   }
 }
