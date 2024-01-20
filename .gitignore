@@ -1,2 +1,4 @@
-/node_modules
-/coverage
+/expressJS/node_modules
+/'Unit test'/node_modules
+/expressJS/coverage
+/'Unit test'/coverage
