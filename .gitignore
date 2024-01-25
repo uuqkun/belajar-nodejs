@@ -2,3 +2,4 @@
 /'Unit test'/node_modules
 /expressJS/coverage
 /'Unit test'/coverage
+/node-db/node_modules
