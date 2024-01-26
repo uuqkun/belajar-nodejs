@@ -23,3 +23,11 @@ model Customer {
 
   @@map("customers")
 }
+
+model books {
+  id Int @id @default(autoincrement())
+  name String
+  price Int
+  category String
+  stock Int
+}

@@ -1,19 +1,9 @@
-create table sample (
-    id varchar(100) not null primary key, 
-    name varchar(100) not null
-)
+create table books (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    price INT NOT NULL,
+    category VARCHAR(255) NOT NULL,
+    stock INT NOT NULL
+) ENGINE=InnoDB;
 
-create table customers (
-    id varchar(100) not null primary key, 
-    name varchar(100) not null,
-    email VARCHAR(100) NOT NULL,
-    phone VARCHAR(100) NOT NULL,
-    constraint constraint_email_unique UNIQUE (email), 
-    constraint constraint_phone_unique UNIQUE (phone)
-) engine innodb;
-
-SELECT * FROM customers;
-
-SHOW TABLES;
-
-DESC customers;
+SELECT * FROM books;
