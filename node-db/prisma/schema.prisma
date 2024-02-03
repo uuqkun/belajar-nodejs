@@ -11,23 +11,58 @@ datasource db {
 }
 
 model sample {
-  id String @id
+  id   String @id
   name String
 }
 
-model Customer { 
-  id String @id
-  name String
-  email String @unique
-  phone String @unique
+model Customer {
+  id       String    @id
+  name     String
+  email    String    @unique
+  phone    String    @unique
+  comments Comment[]
 
   @@map("customers")
 }
 
+model Comment {
+  id          Int      @id @default(autoincrement())
+  customer_id String   @db.VarChar(100)
+  title       String   @db.VarChar(200)
+  description String?  @db.Text
+  customer    Customer @relation(fields: [customer_id], references: [id])
+}
+
 model books {
-  id Int @id @default(autoincrement())
-  name String
-  price Int
+  id       Int    @id @default(autoincrement())
+  name     String
+  price    Int
   category String
-  stock Int
+  stock    Int
+}
+
+model products {
+  id       String @id
+  name     String
+  price    Int
+  category String
+  stock    Int
+}
+
+model Author {
+  id     String        @id
+  detail AuthorDetail?
+
+  @@map("authors")
+}
+
+model AuthorDetail {
+  id          Int    @id @default(autoincrement())
+  author      Author @relation(fields: [authorId], references: [id])
+  authorId    String @unique
+  name        String
+  phone_num   String
+  nationality String
+
+  @@map("author_details")
 }
